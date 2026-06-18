@@ -39,13 +39,20 @@ jobs:
         echo "Build successful. Saving posts.json and index.html as artifacts."
         mkdir -p build_artifacts
         cp posts.json build_artifacts/
-        cp index.html build_artifacts/
+        cp index.html build_artifacts/  
 
     # Step 4: Upload Artifacts (Modern replacement for gh-pages deployment)
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
-      with:
+      with:      
         name: website-assets-${{ github.sha }}
         path: build_artifacts/
 
   # Removed direct deployment job to gh-pages to fix 403 error and use modern artifact workflow
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '.'     
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
