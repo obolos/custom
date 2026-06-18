@@ -1,0 +1,25 @@
+name: GitHub Pages Build
+
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write # Required for deployment actions
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Example step to build the site (replace with actual build if necessary)
+      - name: Build Site
+        run: echo "Build successful"
+
+      # Step to deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs # Assuming output goes into a 'docs' directory
