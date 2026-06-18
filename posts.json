@@ -1,0 +1,35 @@
+[
+  {
+    "id": "post-1",
+    "title": "Знакомство с блог-платформой Hermes",
+    "slug": "hermes-blog-intro",
+    "date": "2026-06-15T10:00:00Z",
+    "author_id": 1,
+    "excerpt": "Мы рады представить новый бэкенд для блога. Эта статья — наш старт.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Узнайте о функциях API...",
+    "tags": ["блог", "старт", "backend"],
+    "featured": true
+  },
+  {
+    "id": "post-2",
+    "title": "Основы чистого дизайна данных (Clean Data Architecture)",
+    "slug": "clean-data-arch-basics",
+    "date": "2026-06-18T14:30:00Z",
+    "author_id": 2,
+    "excerpt": "Как разработать структуру данных, которая выдержит рост нагрузки и изменений бизнес-требований.",
+    "content": "Чистый дизайн данных требует внимания к нормализации, индексации и миграциям. Не экономьте на схемотехнике!",
+    "tags": ["архитектура", "данные", "backend"],
+    "featured": false
+  },
+  {
+    "id": "post-3",
+    "title": "Топ 5 трендов в разработке API в 2026 году",
+    "slug": "top-5-api-trends-2026",
+    "date": "2026-06-21T09:00:00Z",
+    "author_id": 1,
+    "excerpt": "От WebAssembly до GraphQL Mesh — API эволюционирует с головокружительной скоростью.",
+    "content": "Изучение трендов критично для поддержания конкурентоспособности. Посмотрите наши исследования...",
+    "tags": ["api", "тренды", "backend"],
+    "featured": true
+  }
+]
