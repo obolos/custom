@@ -1,0 +1,207 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Global Styles */
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0056b3; /* Primary Blue */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #e67e22; /* Accent Orange */
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav li a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav li a:hover {
+    color: #e67e22;
+}
+
+/* Buttons */
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #e67e22; /* Accent Orange */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #d35400; /* Darker Orange */
+}
+
+/* Hero Section */
+#hero {
+    background-color: #ecf0f1;
+    padding: 120px 0;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#hero h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Content Sections */
+.section-title {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Card Layouts */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    overflow: hidden; /* Keeps image corners clean */
+    display: flex;
+    align-items: center;
+}
+
+.card img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 30px;
+    width: 60%;
+}
+
+.course-card h4 {
+    color: #e67e22; /* Accent Orange */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.course-card ul {
+    list-style: none;
+    padding: 10px 0;
+    color: #27ae60; /* Success Green for checkmarks */
+}
+
+.course-card li::before {
+    content: "✔";
+    margin-right: 8px;
+}
+
+/* Layout Variations */
+.reverse-layout {
+    flex-direction: row-reverse; /* Swaps image and content */
+}
+
+/* Feature List/About Section */
+.flex-grid {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.flex-grid > div:first-child {
+    flex: 2; /* Takes 2 parts of space */
+}
+.image-placeholder {
+    flex: 1; /* Takes 1 part of space (for the image) */
+}
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Contact and Footer */
+#contact .text-center {
+    max-width: 800px;
+}
+.contact-info i {
+    color: #3498db; /* Info Blue */
+    margin-right: 10px;
+}
+.large-cta {
+    margin-top: 30px;
+    padding: 15px 50px;
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.social-links a {
+    color: white;
+    font-size: 2em;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: #e67e22;
+}
