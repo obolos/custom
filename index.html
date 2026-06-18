@@ -3,135 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profi+ | Профессиональное обучение автоэлектрикам и диагностам</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Блог Hermes - Современные статьи о разработке</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom dark mode settings and fonts */
+        :root {
+            --primary-color: #4f46e5; /* Indigo for accents */
+            --bg-dark: #0f172a; /* slate-900 */
+            --card-bg: #1e293b; /* slate-800, slightly lighter than bg */
+            --text-light: #f8fafc; /* slate-50 */
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom card hover effect for better UX */
+        .blog-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid #334155; /* slate-700 border */
+        }
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+        }
+    </style>
 </head>
-<body>
+<body class="min-h-screen antialiased">
 
-    <!-- Navigation Bar -->
-    <header class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Profi+</a>
-            <nav>
-                <ul>
-                    <li><a href="#courses">Обучение</a></li>
-                    <li><a href="#diagnostics">Диагностика</a></li>
-                    <li><a href="#services">Услуги</a></li>
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#contact" class="btn-nav">Контакты</a></li>
-                </ul>
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur border-b border-slate-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-extrabold tracking-tight text-indigo-400 cursor-pointer">
+                Hermes <span class="font-normal text-slate-500">Blog</span>
+            </div>
+            <!-- Navigation Links (Desktop) -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-slate-300 hover:text-indigo-400 transition duration-150 py-2 border-b-2 border-transparent hover:border-indigo-400 font-medium">Статьи</a>
+                <a href="#" class="text-slate-300 hover:text-indigo-400 transition duration-150 py-2 border-b-2 border-transparent hover:border-indigo-400 font-medium">Архив</a>
+                <a href="#" class="text-slate-300 hover:text-indigo-400 transition duration-150 py-2 border-b-2 border-transparent hover:border-indigo-400 font-medium">О нас</a>
             </nav>
+            <!-- CTA Button -->
+            <a href="#" class="hidden md:block bg-indigo-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-indigo-700 transition duration-150 text-sm font-semibold">
+                Начать писать
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button (Placeholder) -->
+        <div class="md:hidden container mx-auto px-4 py-2 flex justify-center items-center">
+             <button id="mobileMenuBtn" class="text-slate-300 hover:text-indigo-400 text-xl">&#9776;</button>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="container">
-            <h1>Мастерство автоэлектрика в XXI веке</h1>
-            <h2>От теории к востребованной профессии с гарантией трудоустройства.</h2>
-            <p>Полный спектр курсов: от диагностики электрического транспорта до работы с электромобилями.</p>
-            <a href="#courses" class="cta-button">Начать обучение →</a>
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Hero Section / Title Block -->
+        <div class="mb-12 text-center border-b pb-8 border-slate-800">
+            <h1 class="text-5xl font-extrabold tracking-tight mb-4 text-white">
+                Все о разработке: от архитектуры до WebAssembly
+            </h1>
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                Современные статьи и глубокий анализ лучших практик в сфере бэкенда, API и чистого кода.
+            </p>
         </div>
-    </section>
 
-    <!-- Main Courses/Programs Section -->
-    <section id="courses" class="content-section section-padding bg-light">
-        <div class="container">
-            <h3 class="section-title">Наши ключевые программы обучения</h3>
-            <p class="section-subtitle">Мы подготовили курсы, которые востребованы рынком прямо сейчас.</p>
-
-            <!-- Course Card 1: Auto-Electrics -->
-            <div class="card course-card">
-                <img src="/images/auto_electrician.jpg" alt="Автоэлектрик">
-                <div class="card-content">
-                    <h4>Дистанционный курс Авто-электриков и Диагностов</h4>
-                    <p>Полный, комплексный онлайн-курс. Обучитесь современным методам диагностики и ремонту авто.</p>
-                    <ul>
-                        <li>✅ Электромобили (EV)</li>
-                        <li>🛠️ Сервисный консультант (ALLUR)</li>
-                        <li>📈 Возможность трудоустройства от 400k до 800k тенге+</li>
-                    </ul>
-                    <a href="#" class="btn-learn">Узнать подробнее</a>
-                </div>
-            </div>
-
-            <!-- Course Card 2: Electric Vehicles -->
-            <div class="card course-card reverse-layout">
-                 <img src="/images/electric_transport.jpg" alt="Электрический транспорт">
-                <div class="card-content">
-                    <h4>Курс «Электрический транспорт»</h4>
-                    <p>Специализированные знания по диагностике и обслуживанию EV. Интерактивное онлайн обучение.</p>
-                    <ul>
-                        <li>⚡ Работа с высоковольтными системами</li>
-                        <li>🔋 Диагностика аккумуляторных батарей</li>
-                        <li>🌐 Международный стандарт EN/ISO</li>
-                    </ul>
-                    <a href="#" class="btn-learn">Начать</a>
-                </div>
-            </div>
-
-             <!-- Course Card 3: Diagnostics -->
-            <div class="card course-card">
-                <img src="/images/diagnostics.jpg" alt="Диагностика автомобиля">
-                <div class="card-content">
-                    <h4>Глубокая Диагностика по OBD2</h4>
-                    <p>Поймите секреты стандартов OBD2 и EOBD. Наши рабочие тетради (практикум) гарантируют понимание процессов.</p>
-                    <ul>
-                        <li>📚 Материалы от профессиональных диагностов</li>
-                        <li>🔧 Диагностика бензиновых двигателей</li>
-                        <li>💡 Практические задания в формате курсов</li>
-                    </ul>
-                    <a href="#" class="btn-learn">Купить книгу</a>
-                </div>
-            </div>
+        <!-- Blog Card Grid -->
+        <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Cards will be inserted here by JavaScript -->
         </div>
-    </section>
 
-    <!-- About Us/Methodology Section -->
-    <section id="about" class="content-section section-padding">
-        <div class="container flex-grid">
-            <div>
-                <h3 class="section-title">Почему выбирают Profi+?</h3>
-                <p>Мы не просто обучаем. Мы строим карьеру. Наша методика основана на <a href="#">инновационных образовательных технологиях</a> и прямой связи с ведущими автосервисами.</p>
-
-                <div class="feature-list">
-                    <div><i class="fas fa-certificate"></i> <strong>Сертификация:</strong> Профессиональные дипломы признаны в отрасли.</div>
-                    <div><i class="fas fa-handshake"></i> <strong>Трудоустройство:</strong> Партнерство с ALLUR — ваша карьера начинается здесь.</div>
-                    <div><i class="fas fa-laptop-code"></i> <strong>Формат обучения:</strong> Гибкий, дистанционный или дуальный (смешанный) режим.</div>
-                </div>
-            </div>
-            <div class="image-placeholder">
-                <img src="/images/digital_education.jpg" alt="Цифровизация образования и обучение">
-            </div>
-        </div>
-    </section>
-
-     <!-- Contact Section -->
-    <section id="contact" class="content-section section-padding bg-light">
-        <div class="container text-center">
-            <h3 class="section-title">Готовы к старту карьеры?</h3>
-            <p class="lead">Свяжитесь с нами, чтобы получить персональную консультацию по выбору курса.</p>
-            <div class="contact-info">
-                <i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX<br>
-                <i class="fas fa-map-marker-alt"></i> г. Алматы, Астана
-            </div>
-            <a href="#" class="cta-button large-cta">Получить консультацию</a>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Profi+ Учебный центр. Все права защищены.</p>
-             <div class="social-links">
-                <a href="#" class="social"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="social"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social"><i class="fab fa-vk"></i></a>
-            </div>
+    <footer class="bg-slate-900/50 border-t border-slate-800 mt-16 py-8 text-center text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; 2026 Hermes. Все права защищены.</p>
+            <p class="mt-2 text-sm">Разработано с профессиональным вкусом и использованием Tailwind CSS.</p>
         </div>
     </footer>
 
+    <script>
+        // 1. Data Source (Simulating API/JSON load)
+        const postsData = [
+          {
+            "id": "post-1",
+            "title": "Знакомство с блог-платформой Hermes",
+            "slug": "hermes-blog-intro",
+            "date": "2026-06-15T10:00:00Z",
+            "author_id": 1,
+            "excerpt": "Мы рады представить новый бэкенд для блога. Эта статья — наш старт.",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Узнайте о функциях API...",
+            "tags": ["блог", "старт", "backend"],
+            "featured": true
+          },
+          {
+            "id": "post-2",
+            "title": "Основы чистого дизайна данных (Clean Data Architecture)",
+            "slug": "clean-data-arch-basics",
+            "date": "2026-06-18T14:30:00Z",
+            "author_id": 2,
+            "excerpt": "Как разработать структуру данных, которая выдержит рост нагрузки и изменений бизнес-требований.",
+            "content": "Чистый дизайн данных требует внимания к нормализации, индексации и миграциям. Не экономьте на схемотехнике!",
+            "tags": ["архитектура", "данные", "backend"],
+            "featured": false
+          },
+          {
+            "id": "post-3",
+            "title": "Топ 5 трендов в разработке API в 2026 году",
+            "slug": "top-5-api-trends-2026",
+            "date": "2026-06-21T09:00:00Z",
+            "author_id": 1,
+            "excerpt": "От WebAssembly до GraphQL Mesh — API эволюционирует с головокружительной скоростью.",
+            "content": "Изучение трендов критично для поддержания конкурентоспособности. Посмотрите наши исследования...",
+            "tags": ["api", "тренды", "backend"],
+            "featured": true
+          }
+        ];
+
+        const blogGrid = document.getElementById('blog-grid');
+
+        // Helper function to format date string
+        const formatDate = (isoDate) => {
+            if (!isoDate) return '';
+            return new Date(isoDate).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' });
+        };
+
+        /**
+         * Generates the HTML card structure for a single blog post.
+         * @param {Object} post - The blog post data object.
+         * @returns {string} HTML string.
+         */
+        const createCardHTML = (post) => {
+            const tagsHtml = post.tags.map(tag => 
+                `<span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-700/50 text-indigo-400 border border-indigo-600">${tag}</span>`
+            ).join(' ');
+
+            const featuredBadge = post.featured 
+                ? '<span class="text-sm font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-yellow-500 text-slate-900 shadow-lg">Featured</span>'
+                : '';
+
+            return `
+                <article class="blog-card p-6 bg-slate-800/70 rounded-xl shadow-xl flex flex-col justify-between cursor-pointer hover:bg-slate-800 transition duration-300">
+                    <div>
+                        ${featuredBadge}
+                        <h2 class="text-2xl font-bold text-white mb-2 leading-tight">${post.title}</h2>
+                        <p class="text-sm text-slate-400 mb-4">${formatDate(post.date)}</p>
+                        <div class="mb-4 flex flex-wrap gap-2">
+                            ${tagsHtml}
+                        </div>
+                        <p class="text-slate-300 mb-6 text-sm line-clamp-3">${post.excerpt}</p>
+                    </div>
+
+                    <!-- Footer/Link -->
+                    <a href="/posts/${post.slug}" class="inline-flex items-center justify-start mt-auto text-indigo-400 hover:text-indigo-300 font-semibold transition duration-150">
+                        Читать далее 
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </article>
+            `;
+        };
+
+        // 2. Render Posts
+        const renderBlogPosts = (posts) => {
+            if (!blogGrid || !posts) return;
+
+            const cardsHtml = posts.map(createCardHTML).join('');
+            blogGrid.innerHTML = cardsHtml;
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderBlogPosts(postsData);
+
+            // Basic Mobile Menu Toggle (Enhancement for UX/Completeness)
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    alert("Мобильное меню: Здесь должен появиться скроемый блок навигации.");
+                });
+            }
+        });
+
+    </script>
 </body>
 </html>
